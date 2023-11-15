@@ -3,7 +3,8 @@ import 'package:flutter_curriculo/telaLogin/controlador/auth_controller.dart';
 import 'package:get/get.dart';
 
 import 'baseScreen/Controller/base_controller.dart';
-import 'baseScreen/view/base_screen.dart';
+import 'clientes/controller/cliente_controller.dart';
+import 'componentes/tema.dart';
 import 'pages/pages_routes.dart';
 
 void main() {
@@ -11,6 +12,8 @@ void main() {
 
   Get.put(AuthController());
   Get.put(PageViewController());
+  Get.put(ClienteController());
+  Get.put(ThemeController());
 
   runApp(const MyApp());
 }
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.native,
       locale: const Locale('pt', 'BR'),
       theme: ThemeData.light(),
-      initialRoute: PagesRoutes.baseScreen,
+      initialRoute: PagesRoutes.loginScreen,
+      initialBinding: BindingsBuilder(() {}),
       getPages: AppPages.pages,
     );
   }

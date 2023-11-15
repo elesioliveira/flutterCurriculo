@@ -22,7 +22,7 @@ class AuthController extends GetxController {
     isLoading.value = false;
     result.when(
         success: (user) {
-          Get.offAllNamed(PagesRoutes.clienteRoute);
+          Get.offAllNamed(PagesRoutes.baseScreen);
         },
         error: (message) {});
   }

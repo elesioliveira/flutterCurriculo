@@ -23,11 +23,12 @@ class ClienteController extends GetxController {
 
     personResult.when(
       success: (data) {
+        if (allPerson.isNotEmpty) return;
         allPerson.assignAll(
           data,
         );
         print(
-          allPerson,
+          allPerson.length,
         );
       },
       error: (message) {},

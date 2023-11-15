@@ -118,6 +118,7 @@ class _TelaScreenState extends State<TelaScreen> {
                                           password = paswordController!.text;
                                           controller.signIn(
                                               email: email, password: password);
+                                          FocusScope.of(context).unfocus();
                                         }
                                       },
                                 child: controller.isLoading.value
